@@ -45,20 +45,10 @@ for(i=0;i<users.length;i++){
 let myTable = document.getElementsByTagName('tbody')[0];
 for(i=0;i<users.length;i++){
 let tableItem = document.createElement('tr');
+for(var key in users[i]){
 let tableCell = document.createElement('td');
-let tableCell2 = document.createElement('td');
-let tableCell3 = document.createElement('td');
-let tableCell4 = document.createElement('td');
-let tableCell5 = document.createElement('td');
-tableCell.innerHTML = users[i]['firstName'];
-tableCell2.innerHTML = users[i]['lastName'];
-tableCell3.innerHTML = users[i]['age'];
-tableCell4.innerHTML = users[i]['email'];
-tableCell5.innerHTML = users[i]['location'];
+tableCell.innerHTML = users[i][key];
 tableItem.appendChild(tableCell);
-tableItem.appendChild(tableCell2);
-tableItem.appendChild(tableCell3);
-tableItem.appendChild(tableCell4);
-tableItem.appendChild(tableCell5);
+}
 myTable.appendChild(tableItem);
 }
